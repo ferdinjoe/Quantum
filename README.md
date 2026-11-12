@@ -2,6 +2,11 @@
 
 **Quantum Research · Quantum Software Development · Quantum Pre-sales & Solutions Architecture**
 
+**What this folder is:** sixteen notebooks demonstrating twenty-one quantum-computing concepts from the
+maths up — each with the printed line that constitutes the demonstration — under 4,193 self-test
+assertions that pass with every reference library blocked (4,303 with them installed), and no claim
+anywhere of a hardware result.
+
 | Reach me | |
 |---|---|
 | **Email** (fastest, and preferred) | [ferdinjoe@gmail.com](mailto:ferdinjoe@gmail.com) |
@@ -15,13 +20,26 @@
 > **installed** (16/16 clean, 4,303 assertions passing, zero failed cells and zero failed assertions in
 > either mode). There are no screenshots, no pre-baked outputs and no library call presented as an
 > achievement. Two of the sixteen are customer proof-of-concepts that end by reporting *no quantum
-> advantage on this instance*, with the reason measured rather than asserted. If your quantum
+> advantage on this instance*, with the reason measured rather than asserted. Read the files as what
+> they are: **demonstrations of quantum-computing concepts** — [this table](#demonstrations-of-the-quantum-concepts-one-measured-line-each)
+> maps 21 of them, from superposition and the Born rule through no-cloning, amplitude amplification,
+> phase estimation, the variational principle and stabiliser encoding, each to the single line its
+> notebook prints. If your quantum
 > programme needs someone who can prototype an algorithm, price it against a real device's error
 > budget, and then stand in front of the customer's technical team and explain what the number means
 > — that is the three-part profile this portfolio is built to demonstrate, and I would like 30 minutes
 > to show it live.
 
-*Keywords for searching: quantum computing, quantum algorithms, Grover, Shor, QFT, quantum phase
+*Keywords for searching: quantum computing, quantum algorithm demonstrations, superposition,
+quantum interference, Born rule, measurement postulate, no-cloning theorem, entanglement, EPR, CHSH,
+Bell states, entropy of entanglement, quantum parallelism, amplitude amplification, phase kickback,
+quantum Fourier transform, phase estimation, variational principle, Hamiltonian simulation,
+Jordan–Wigner, fermion-to-qubit mapping, cost Hamiltonian, QUBO, Ising model, parameter-shift rule,
+barren plateau, quantum kernel methods, decoherence, Kraus channels, amplitude damping, depolarising
+noise, stabiliser codes, CSS codes, syndrome extraction, fault tolerance, surface code threshold,
+randomised benchmarking, gate-set tomography, zero-noise extrapolation, readout mitigation, QKD, BB84,
+privacy amplification, hybrid quantum-classical workflow, trapped-ion native gates, gate compilation,
+bit-order conventions, classical baseline comparison, Grover, Shor, QFT, quantum phase
 estimation, VQE, QAOA, Max-Cut, QUBO, Ising Hamiltonian, quantum chemistry, Jordan–Wigner, ansatz,
 parameter-shift, quantum machine learning, quantum kernels, QNN, QGAN, BB84, quantum key distribution,
 QEC, stabiliser codes, surface code, NISQ, randomised benchmarking, gate-set tomography, error
@@ -38,6 +56,8 @@ Google Colab, cloud architecture, solutions architecture, pre-sales, technical a
 | You have | Open |
 |---|---|
 | 60 seconds | This page, then [Bell_Inequality.ipynb](Bell_Inequality.ipynb) — scroll to its recap. |
+| 2 minutes, and you want the concepts | [The demonstrations table](#demonstrations-of-the-quantum-concepts-one-measured-line-each) — 21 quantum concepts, each with the one printed line that constitutes the demonstration. |
+| 3 minutes, and you are weighing a role | [Why this is the profile these roles are short-listing](#why-this-is-the-profile-these-roles-are-short-listing) — four tracks, each with the column this portfolio does *not* evidence. |
 | 15 minutes | [The three-minute version](#the-three-minute-version-by-what-you-are-hiring-for), then [the portfolio table](#the-portfolio). |
 | 10 minutes and a customer in the room | [IonQ_QAOA_Portfolio.ipynb](IonQ_QAOA_Portfolio.ipynb) — its *ten-minute walkthrough* is a seven-cell deck script: the sentence to say, and the number that cell prints live. |
 | A live technical screen | Any notebook + `Runtime ▸ Run all`. The last cell prints its own verdict. |
@@ -52,6 +72,12 @@ gradient rules, noise channels, decoders, key-sifting protocol machinery, a card
 mean–variance objective turned into a QUBO, and a gate-level instruction list that compiles down to
 a trapped-ion device's native operations — and then check every one of them against an independent
 reference implementation (Qiskit, PennyLane, PySCF, dimod, scikit-learn) where a reference exists.
+
+Framed the way I would frame them in an interview: **these are my demonstrations of quantum-computing
+concepts**, one concept per section, each closed by a number the same file prints and asserts. The
+applications are where the concepts bite, which is why the mapping is in a table of its own
+[*above*](#demonstrations-of-the-quantum-concepts-one-measured-line-each) rather than left for a reader
+to infer from sixteen filenames.
 
 Nothing here is a tutorial wrapper around a library. Every quantity a reader might want to argue
 about is *computed* in this repository, printed with its tolerance, and asserted. Where a reference
@@ -115,11 +141,15 @@ You do not need to follow the maths to check the claim. Open any notebook in Goo
 those checks with every reference library unimportable and 4,303 with them installed, zero failures —
 and every external library comparison is printed with its error, including the ones that were not
 perfect. If you are matching against a job description, the table under *The portfolio* names the
-sub-field each file covers, so the JD keywords map one to one.
+sub-field each file covers, so the JD keywords map one to one — and the table under
+[Concepts, demonstrated](#demonstrations-of-the-quantum-concepts-one-measured-line-each) does the same
+for the underlying physics, one printed line per concept.
 
 ### If you are matching a job description
 
-Hand me the JD and I will do this properly, but the short map is:
+Hand me the JD and I will do this properly, but the short map is — and the longer, role-by-role version,
+including what this portfolio does not evidence, is
+[here](#why-this-is-the-profile-these-roles-are-short-listing):
 
 | Your requirement | The evidence |
 |---|---|
@@ -133,6 +163,66 @@ Hand me the JD and I will do this properly, but the short map is:
 | Quantum security / QKD | `BB84_Quantum_Key_Distribution`, `Bell_Inequality` |
 | Hybrid quantum-classical platform or cloud integration | `Hybrid_Quantum_Cloud` |
 | Customer-facing technical work, proposals, PoC scoping | all sixteen, plus the professional background at the end of this file |
+
+---
+
+## Demonstrations of the quantum concepts, one measured line each
+
+Underneath the applications, these sixteen notebooks are a set of **demonstrations** of the concepts a
+quantum role is actually built on: superposition, the Born rule, entanglement, no-cloning, amplitude
+amplification, phase estimation, the variational principle, fermion mapping, decoherence, stabiliser
+encoding, constraint penalties — and the one nobody puts on a syllabus, knowing when a quantum circuit
+is the wrong tool. Each row below names the concept, the file that demonstrates it, and the single line
+the file *prints* that constitutes the demonstration. Every number comes from the 12 November 2026
+serial runs; none of them is a hardware result.
+
+| Concept | Demonstrated in | The printed line that is the demonstration |
+|---|---|---|
+| **Superposition and interference** | [`Quantum_Circuit.ipynb`](Quantum_Circuit.ipynb) | `H·Z·H = X` verified as a matrix identity rather than asserted, inside a suite of 88 passing assertions, with global-phase stripping shown on the same state |
+| **Measurement, the Born rule, finite shots** | [`Bell_Inequality.ipynb`](Bell_Inequality.ipynb) | a local hidden-variable source sitting *exactly* on the `S = 2` bound lands above it in about half of all runs at **any** shot count — so `Ŝ > 2` proves nothing on its own, and it is the significance `(Ŝ−2)/σ` that grows with `N` |
+| **Entanglement and nonlocality** | [`Bell_Inequality.ipynb`](Bell_Inequality.ipynb) | `S = 2√2` quantum against `2.000000` classical over a dense angle scan, with the breaking thresholds measured rather than quoted: white noise `p* = 1 − 1/√2 ≈ 0.293`, readout error `ε* ≈ 0.0796` |
+| **No-cloning, basis disturbance** | [`BB84_Quantum_Key_Distribution.ipynb`](BB84_Quantum_Key_Distribution.ipynb) | optimal-intercept-resend cloner fidelity measured at `0.833333 = 5/6`, and the information-equivariance threshold `Q* = 0.146447` with the `1 − 2h(Q) = 0` abort point at `Q = 0.110028` |
+| **Amplitude amplification, quadratic speedup** | [`Grovers_Search.ipynb`](Grovers_Search.ipynb) | `N = 256, M = 1` peaks at `t* = 12` with success `0.999947`; the log-log slope of queries-to-50% against `N`, measured over `N = 4 … 2²⁰`, is **0.485** against the theoretical `0.5` — and `p = 0.002` noise pushes the best attainable probability under a coin flip |
+| **Period and order finding** | [`Shors_Algorithm.ipynb`](Shors_Algorithm.ipynb) | all order-finding peaks land on multiples of `r`, `φ(r)/r = 0.5000` per shot, factor-vs-order oracle equivalence verified with **0** mismatches — and the classical side benchmarked honestly (trial division beat the simulator by ~3000× at small `N`) |
+| **Quantum phase estimation** | [`QFT_Phase_Estimation.ipynb`](QFT_Phase_Estimation.ipynb) | single-shot accuracy `P(\|err\| ≤ 2⁻⁴) = 0.954973`, rising to **1.000000** with majority vote over the same shots; dyadic phases peak at exactly `1.0` while generic phases lose mass in the documented pattern |
+| **The variational principle** | [`VQE_Molecular_Ground_State.ipynb`](VQE_Molecular_Ground_State.ipynb) | a hardware-efficient `Ry` ansatz reaches the exact ground energy to `−2.2e-16 Ha` — after the Hamiltonian it optimises is checked against two independent chemistry engines (`3.0e-11 Ha` PySCF, `1.87e-08 Ha` PennyLane), because an ansatz can only be as honest as its operator |
+| **Fermion → qubit mapping (Jordan–Wigner)** | [`VQE_Molecular_Ground_State.ipynb`](VQE_Molecular_Ground_State.ipynb) | the from-scratch Gaussian-integral and RHF engine matches PySCF's integrals to `2.8e-11 Ha` and its RHF energy to `9.7e-13 Ha`, so the transform is verified before the optimiser is trusted |
+| **Cost Hamiltonians, QUBO and Ising encodings** | [`QAOA_MaxCut.ipynb`](QAOA_MaxCut.ipynb), both IonQ notebooks | `K₃,₃` at `p = 1` reaches the analytic ceiling `F = 6.232050808` = `0.69245·\|E\|`; the IonQ QUBO matches brute force at `0.000e+00` over all 256 rosters, and the portfolio QUBO matches an independent `ExactSolver` at `\|gap\| = 3.331e-16` |
+| **Parameter-shift gradients** | [`Quantum_Neural_Network.ipynb`](Quantum_Neural_Network.ipynb), [`QAOA_MaxCut.ipynb`](QAOA_MaxCut.ipynb) | the exact shift rule against finite differences at `1.78e-09`, while the "textbook" formula applied to non-commuting terms is off by **`1.225`** — a real trap, demonstrated rather than mentioned; PennyLane agrees with my gradients to `6.7e-16` |
+| **Barren plateaus and optimiser pathology** | [`IonQ_QAOA_Portfolio.ipynb`](IonQ_QAOA_Portfolio.ipynb) | on the reference slice the entire `β = π/2` edge is one number (spread `1.388e-16`) and the `p = 1` search converges to `+0.028918061`, which is *exactly* the trivial uniform energy — a plateau an optimiser can report as converged and as nothing else |
+| **Hard constraints as penalty terms** | [`IonQ_QAOA_Portfolio.ipynb`](IonQ_QAOA_Portfolio.ipynb) | the exact penalty threshold `A* = 0.120233` solved for and re-derived a second way to `0.000e+00`, which still spreads the QUBO spectrum to `1.5×` the range of the legal portfolios it exists to rank; drop the penalty from the ranking and an illegal basket beats the true optimum by `0.12023` — the number that would reach a risk committee |
+| **Quantum kernels and feature maps** | [`Quantum_Kernel_SVM.ipynb`](Quantum_Kernel_SVM.ipynb) | parity `p = 2`: quantum `0.806` / RBF `0.833` / linear `0.639` — the quantum kernel is published *behind* the RBF one on this problem, with train accuracy identical to scikit-learn at `0.9500 / 0.9500` |
+| **Adversarial learning with a quantum critic** | [`Quantum_GAN.ipynb`](Quantum_GAN.ipynb) | critic BCE `1.38 → 0.02` with a full Hermitian critic against `1.39 → 1.39` — literally no learning — with a diagonal-only one, which localises the capacity in the coherence term |
+| **Decoherence and noise channels** | [`Noise_Benchmarking.ipynb`](Noise_Benchmarking.ipynb) | mean fidelity `0.75928` measured across five circuits and 101 two-qubit gates, and the CHSH violation disappearing at `p = 0.2103` |
+| **Stabiliser encoding, fault tolerance** | [`Quantum_Error_Correction.ipynb`](Quantum_Error_Correction.ipynb) | the logical-qubit budget computed from the notebook's own threshold model — `p = 0.002 → d = 15 (225 qubits)`, `p = 0.008 → d = 103 (10,609 qubits)`, `p ≥ 0.010 → no distance below 201 works` — with the decoder's measured logical error rate held against it |
+| **Device characterisation and error mitigation** | [`Noise_Benchmarking.ipynb`](Noise_Benchmarking.ipynb) | randomised benchmarking with Clifford grouping, interleaved RB, gate-set tomography *lite*, RBE from a `T1`/`T2`/readout budget, zero-noise extrapolation and readout mitigation, 457 assertions in one file |
+| **Gate compilation and vendor conventions** | both IonQ notebooks | the endianness trap kept at both values: `7.076e-17` after reconciling q0/least-significant-bit order, `1.262e-01` if it is forgotten — plus the `rzz` half-angle trap measured at `0.0969` wrong (74% relative) and completely invisible in the gate list |
+| **Hybrid quantum-classical orchestration** | [`Hybrid_Quantum_Cloud.ipynb`](Hybrid_Quantum_Cloud.ipynb) | the orchestrator returns the same energy as the local simulator to `4.44e-16` while absorbing **22 injected retryable provider failures** without changing the answer |
+| **Knowing when not to use a quantum computer** | [`IonQ_QAOA_MaxCut.ipynb`](IonQ_QAOA_MaxCut.ipynb), [`IonQ_QAOA_Portfolio.ipynb`](IonQ_QAOA_Portfolio.ipynb) | both engagements close on their own printed verdict of *no practical value / no quantum advantage on this instance*, each naming the instance size at which that stops being true — `C(40,6) = 3.8e9` baskets for the portfolio file — and each leaving the conditions untested rather than asserting them |
+
+---
+
+## Why this is the profile these roles are short-listing
+
+The four tracks below are the quantum openings this portfolio was built against. For each, the middle
+column is what the job demands day to day and what in these files answers it; the last column is what
+this portfolio genuinely does **not** evidence, because a candidate who leaves that column blank is the
+one who oversells the technology and loses the room.
+
+| Role | What the job asks for, and the evidence here | What it does not evidence |
+|---|---|---|
+| **Quantum research scientist** | Requires a derivation you can defend and a number you did not choose. Evidence: closed forms asserted against my own numerics (`P(t) = sin²((2t+1)θ)` swept to the measured `0.485` slope), thresholds *solved for* rather than lifted from a paper (`p* = 1 − 1/√2`, `Q* = 0.146447`, `A* = 0.120233`), and a demonstrated case where a widely-copied gradient formula is wrong by `1.225`. | No peer-reviewed quantum result and no original algorithm. My publication record — around 39 papers, 900+ citations, H-index 18 — is in deep learning, computer vision, time-series forecasting and IoT, not quantum. |
+| **Quantum software engineer / algorithm developer** | Requires building the machinery, not calling it, and knowing where it breaks. Evidence: statevector, density-matrix and Pauli-trajectory engines, decoders, gradient rules, QUBO builders and a gate-level IR that compiles to a device's native operations, all verified against Qiskit, PennyLane, PySCF, dimod and scikit-learn rather than trusted. The no-library protocol found two genuine bugs that a normal local run cannot see — a bare `%pip` line inside an `except ImportError` block, and an unguarded reference import — both of which survived for weeks while looking green. | No production quantum codebase with review, CI and a maintenance burden behind it. No C++/Rust tensor contraction, and no depth inside a large SDK's source rather than its public API. |
+| **QPU application / field engineer at a device vendor** | Requires taking a customer's problem to a priced, judged answer on *your* architecture. Evidence: two complete engagements in single files — business problem → QUBO → cost Hamiltonian → native gate payload (`gpi`/`gpi2`/`zz`) → ideal / noisy / hardware tiers → price per answer under two public rate cards → verdict against the baseline the customer's analysts already run. A dated `VENDOR` table where anything unconfirmed stays `UNKNOWN` rather than estimated, routing accounting (`14` entangling gates per layer all-to-all vs `48` on a path, `×3.43`; `36` layers vs `84` serial operations in the portfolio file), and a replay harness a real distribution can be pasted into. The portfolio file also carries a seven-cell ten-minute deck script written for a bank's CTO. | **No real device time.** This machine has no `IONQ_API_KEY`, no job was submitted, and every tier-3 cell is printed as `UNKNOWN`. The gap is account access, not understanding — the notebooks are written so that pasting in a measured distribution completes the scoreboard rather than rewriting it. |
+| **Quantum pre-sales / solutions architect** | Requires holding the customer's side of a technical conversation. Evidence: `Noise_Benchmarking` is the deck you take into the meeting (what a `T1`/`T2` table actually costs a circuit), `Hybrid_Quantum_Cloud` prices and retries a hybrid platform, and both POCs report the less flattering number on purpose. Behind that, the day job is the same discipline: Senior Training Advisor and AI / Generative-AI Solutions Architect at Alibaba Cloud, and an assistant professor teaching machine learning and data science — so translating a result into a decision is the part I do for a living. | No quantum customer references and no quantum pipeline history. The commercial record is in cloud and AI, and the quantum engagements here are self-commissioned proof-of-concepts, not delivered contracts. |
+
+**The one-line version:** I can prototype the algorithm, price it against a real device's error budget,
+and stand in front of the customer's technical team and explain what the number means — and I will tell
+you which of those three your own JD weights most, rather than claiming all three equally. If your list
+puts device access or a published quantum result at the top, this profile does not meet it yet and I
+would say so in the interview rather than in the follow-up. If it puts correct implementation, honest
+benchmarking, and the ability to survive a lab lead *and* a CTO in the same hour, that is precisely what
+these sixteen files were built to demonstrate.
 
 ---
 
@@ -406,7 +496,11 @@ I work as a **Senior Training Advisor and AI / Generative-AI Solutions Architect
 and teach **machine learning and data science** as an assistant professor — a research record of
 around 39 publications, 900+ citations and an H-index of 18, in deep learning, computer vision,
 time-series forecasting and IoT before quantum became the interesting part. I am based in Singapore
-and have worked across India, Thailand and Singapore. That combination is why this portfolio is
+and have worked across India, Thailand and Singapore. The roles I am aiming at are the ones where
+those two careers overlap instead of competing: **quantum application / field engineering at a device
+vendor, quantum pre-sales and solutions architecture, and quantum software development** — the first
+especially, because it is the job that is paid to be honest about a number in front of a customer.
+That combination is why this portfolio is
 deliberately three things at once:
 
 * **research credibility** — derivations, closed forms, thresholds and error budgets that a quantum
